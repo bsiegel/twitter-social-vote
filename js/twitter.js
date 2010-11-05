@@ -22,7 +22,7 @@ function vote(vote, suffix)
 function init_votes() {
     $('div').each(function() {
         var myID = this.id;
-        $(this).html('<b>' + myID + ':</b> <span id="up-'+ myID + '"></span> <span style="color: green" onclick="vote(' + myID + ', \'u\')">up</span>, <span id="down-' + myID + '"></span> <span style="color: red" onclick="vote(' + myID + ', \'d\')">down</span><span id="spin-' + myID + '" style="margin-left: 5px"><img src="img/spin.gif" /></span>');
+        $(this).html('<b>' + this.title + ':</b> <span id="up-'+ myID + '"></span> <span style="color: green" onclick="vote(' + myID + ', \'u\')">up</span>, <span id="down-' + myID + '"></span> <span style="color: red" onclick="vote(' + myID + ', \'d\')">down</span><span id="spin-' + myID + '" style="margin-left: 5px"><img src="img/spin.gif" /></span>');
         get_votes(this);
     });
 }
